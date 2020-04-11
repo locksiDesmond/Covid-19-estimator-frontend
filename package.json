@@ -1,0 +1,28 @@
+{
+  "name": "Covid-19-estimator-frontend",
+  "version": "1.0.0",
+  "description": "Covid-19-estimator-frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/locksiDesmond/Covid-19-estimator-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/locksiDesmond/Covid-19-estimator-frontend/issues"
+  },
+  "homepage": "https://github.com/locksiDesmond/Covid-19-estimator-frontend#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "^12.4.1"
+  }
+}

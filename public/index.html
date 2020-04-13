@@ -8,20 +8,45 @@
       content="author: Adenola desmond for:SDGChallenge 2020"
     />
     <title>covid-19</title>
-    <link rel="icon" href="image/cdc-bkc-m0iZ4Sk-unsplash.jpg" />
-    <link
+    <!-- <link rel="icon" href="image/asgnw-yjr3e.webp" /> -->
+    <!-- <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
+      defer
+    /> -->
+    <!-- <link
+      rel="preload"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    /> -->
+    <!-- <noscript
+      ><link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    /></noscript> -->
+    <link
+      href="css/main.css"
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="preload"
+      href="css/font.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
   </head>
   <body>
     <nav class="navbar d-flex bg-dark">
       <div class="d-flex text-white">
         <div class="image">
-          <img src="image/cdc-bkc-m0iZ4Sk-unsplash.jpg" alt="covid-19" />
+          <!-- <img src="image/asgnw-yjr3e.webp" alt="covid-19" /> -->
         </div>
         <div class="header">
           <h1 id="header">
@@ -113,7 +138,13 @@
           >
           and my email is des.olanrewaju@gmail.com.
         </p>
+        <p class="js"></p>
       </div>
     </footer>
   </body>
+  <script>
+    chrome.runtime.onMessage.addListener((first, second, sendRespose) => {
+      sendRespose();
+    });
+  </script>
 </html>

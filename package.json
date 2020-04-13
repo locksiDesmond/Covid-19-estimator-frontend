@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/locksiDesmond/Covid-19-estimator-frontend#readme",
   "dependencies": {
+    "compression": "^1.7.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1"
   },

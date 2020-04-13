@@ -22,10 +22,7 @@ const jsonResponse = (req, res) => {
   const text = `${req.method}\t\t${req.baseUrl}${req.url}\t\t${res.statusCode}\t\t${time}ms`;
   readfile(text);
 };
-
-router.get("/", jsonResponse);
-router.get("/json", jsonResponse);
-router.get("/xml", (req, res) => {
+const xmlResponse = (req, res) => {
   const start = new Date();
   const result = covidEstimator(req.body);
   res.set("Content-type", "application/xml");
@@ -34,12 +31,20 @@ router.get("/xml", (req, res) => {
   const time = new Date() - start;
   const text = `${req.method}\t\t${req.baseUrl}${req.url}\t\t${res.statusCode}\t\t${time}ms`;
   readfile(text);
-});
-router.get("/logs", (req, res) => {
+};
+const logResponse = (req, res) => {
   fs.readFile(path.join(__dirname, "../logs.txt"), "utf-8", (err, data) => {
     if (err) console.log(err);
     res.set("Content-Type", "text/plain");
     res.send(data);
   });
-});
+};
+router.get("/", jsonResponse);
+router.post("/", jsonResponse);
+router.post("/json", jsonResponse);
+router.get("/json", jsonResponse);
+router.get("/xml", xmlResponse);
+router.post("xml", xmlResponse);
+router.get("/logs", logResponse);
+router.post("/logs", logResponse);
 module.exports = router;

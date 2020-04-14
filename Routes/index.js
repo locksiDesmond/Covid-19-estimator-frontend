@@ -39,12 +39,12 @@ const logResponse = (req, res) => {
     res.send(data);
   });
 };
+router.get("/xml", xmlResponse);
+router.post("/xml", xmlResponse);
+router.get("/logs", logResponse);
+router.post("/logs", logResponse);
 router.get("/", jsonResponse);
 router.post("/", jsonResponse);
 router.post("/json", jsonResponse);
 router.get("/json", jsonResponse);
-router.get("/xml", xmlResponse);
-router.post("xml", xmlResponse);
-router.get("/logs", logResponse);
-router.post("/logs", logResponse);
 module.exports = router;

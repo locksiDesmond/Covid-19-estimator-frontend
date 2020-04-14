@@ -41,3 +41,22 @@
   font-style: normal;
   font-display: swap;
 }
+@media (max-width: 768px) {
+  .flex--div {
+    display: block;
+  }
+  .main--section {
+    width: 95%;
+    height: 100%;
+    margin-top: 0rem;
+    border-radius: 0rem;
+  }
+
+  .flex--div > div:first-child {
+    border-right: none;
+  }
+  .flex--row p {
+    border-top: 1px solid #1f211f;
+    padding-top: 1.5rem;
+  }
+}

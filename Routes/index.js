@@ -25,7 +25,7 @@ const jsonResponse = (req, res) => {
 const xmlResponse = (req, res) => {
   const start = new Date();
   const result = covidEstimator(req.body);
-  res.set("Content-type", "application/xml");
+  res.set("content-type", "application/xml");
   const xmlformat = js2xmlparser.parse("body", result);
   res.status(200).send(xmlformat);
   const time = new Date() - start;
@@ -35,7 +35,7 @@ const xmlResponse = (req, res) => {
 const logResponse = (req, res) => {
   fs.readFile(path.join(__dirname, "../logs.txt"), "utf-8", (err, data) => {
     if (err) console.log(err);
-    res.set("Content-Type", "text/plain");
+    res.set("content-type", "text/plain");
     res.send(data);
   });
 };

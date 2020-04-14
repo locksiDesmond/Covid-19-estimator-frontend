@@ -8,27 +8,6 @@
       content="author: Adenola desmond for:SDGChallenge 2020"
     />
     <title>covid-19</title>
-    <!-- <link rel="icon" href="image/asgnw-yjr3e.webp" /> -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-      defer
-    /> -->
-    <!-- <link
-      rel="preload"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    /> -->
-    <!-- <noscript
-      ><link
-        rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    /></noscript> -->
     <link
       href="css/main.css"
       rel="preload"
@@ -43,108 +22,92 @@
     />
   </head>
   <body>
-    <nav class="navbar d-flex bg-dark">
-      <div class="d-flex text-white">
-        <div class="image">
-          <!-- <img src="image/asgnw-yjr3e.webp" alt="covid-19" /> -->
-        </div>
-        <div class="header">
-          <h1 id="header">
-            covid 19 estimator
-          </h1>
-        </div>
-      </div>
-    </nav>
-    <div class="jumbotron jumbotron-fluid pl-3">
-      <p>
-        A simple single page web app that can allow
-      </p>
-      <p>
-        the data passed to your estimator
-      </p>
-      <p>
-        function created for (#BuildforSDG Challenge 2020) to be
-      </p>
-      inputed from a UI.
-    </div>
-    <div class="container-fluid">
-      <form>
-        <div class="form-group">
-          <label for="population">
-            Population
-          </label>
-          <input
-            id="population"
-            type="number"
-            class="form-control"
-            data-population
-          />
-        </div>
+    <div class="topline"></div>
 
-        <div class="form-group">
-          <label for="timeToElapse">Time to elapse</label>
-          <input
-            id="timeToElapse"
-            type="number"
-            class="form-control"
-            data-time-to-elapse
-          />
+    <h1></h1>
+    <section class="main--section">
+      <div class="flex--div">
+        <div class="">
+          <p>
+            A simple single page web app that can allow the data passed to your
+            estimator function created for (#BuildforSDG Challenge 2020) to be
+            inputed from a UI.
+          </p>
         </div>
-        <div class="form-group">
-          <label for="reportedCases">Reported Cases</label>
-          <input
-            id="reportedCases"
-            type="number"
-            class="form-control"
-            data-reported-cases
-          />
+        <div class="flex--row">
+          <p>Enter your covid 19 information</p>
+          <form>
+            <div class="form--group">
+              <label for="population">Population</label>
+              <input
+                id="population"
+                type="number"
+                class="form--control"
+                data-population
+              />
+            </div>
+
+            <div class="form--group">
+              <label for="timeToElapse">Time to elapse</label>
+              <input
+                id="timeToElapse"
+                type="number"
+                class="form--control"
+                data-time-to-elapse
+              />
+            </div>
+            <div class="form--group">
+              <label for="reportedCases">Reported Cases</label>
+              <input
+                id="reportedCases"
+                type="number"
+                class="form--control"
+                data-reported-cases
+              />
+            </div>
+            <div class="form--group">
+              <label for="totalHospitalBeds"
+                >Total Number of Hospital Beds</label
+              >
+              <input
+                id="totalHospitalBeds"
+                type="number"
+                class="form--control"
+                data-total-hospital-beds
+              />
+            </div>
+            <div class="form--group">
+              <label for="periodType"> Period Type</label>
+              <select
+                value="days"
+                id="periodType"
+                data-period-type
+                class="form--control"
+              >
+                <option value="days">days</option>
+                <option value="weeks">weeks</option>
+                <option value="months">Month</option>
+              </select>
+            </div>
+            <div class="form--group">
+              <div class="empty"></div>
+              <input
+                class="btn--mine"
+                type="button"
+                value="Submit"
+                data-go-estimate
+              />
+            </div>
+          </form>
         </div>
-        <div class="form-group">
-          <label for="totalHospitalBeds">Total Number of Hospital Beds</label>
-          <input
-            id="totalHospitalBeds"
-            type="number"
-            class="form-control"
-            data-total-hospital-beds
-          />
-        </div>
-        <div class="form-group">
-          <label for="periodType"> Period Type</label>
-          <select
-            value="days"
-            id="periodType"
-            data-period-type
-            class="form-control"
-          >
-            <option value="days">days</option>
-            <option value="weeks">weeks</option>
-            <option value="months">Month</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <div class="empty"></div>
-          <input
-            class="btn btn-dark"
-            type="button"
-            value="Submit"
-            data-go-estimate
-          />
-        </div>
-      </form>
-    </div>
-    <footer>
-      <div class="footer">
-        <p>
-          Hey, My name is Adenola Desmond and i'm the designer of this website.
-          i'm a front-end Developer and i also do Basic Back-end development.
-          i'm basically a mern stack developer. Here is
-          <a href="https://github.com/locksiDesmond" class="links">
-            my github link</a
-          >
-          and my email is des.olanrewaju@gmail.com.
-        </p>
-        <p class="js"></p>
       </div>
-    </footer>
+      <footer>
+        <div class="footer">
+          <a href="https://www.linkedin.com/in/olamilekan-adenola-0a901a199/"
+            >Contact Developer</a
+          >
+        </div>
+      </footer>
+    </section>
   </body>
 </html>

@@ -19,9 +19,7 @@ const jsonResponse = (req, res) => {
   const result = covidEstimator(req.body);
   res.status(200).json(result);
   const time = new Date() - start;
-  const text = `${req.method}\t\t${req.baseUrl}${req.url}\t\t${
-    res.statusCode
-  }\t\t${10 + time}ms`;
+  const text = `${req.method}   ${req.baseUrl}${req.url}    ${res.statusCode}   ${time}ms`;
   readfile(text);
 };
 const xmlResponse = (req, res) => {
@@ -31,9 +29,7 @@ const xmlResponse = (req, res) => {
   const xmlformat = js2xmlparser.parse("body", result);
   res.status(200).send(xmlformat);
   const time = new Date() - start;
-  const text = `${req.method}\t\t${req.baseUrl}${req.url}\t\t${
-    res.statusCode
-  }\t\t${10 + time}ms`;
+  const text = `${req.method}   ${req.baseUrl}${req.url}   ${res.statusCode}    ${time}ms`;
   readfile(text);
 };
 const logResponse = (req, res) => {
